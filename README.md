@@ -7,6 +7,8 @@
 ## Objective
 
 ## Pre requisites
+    - Docker
+
 
 ## Repository Structure
 

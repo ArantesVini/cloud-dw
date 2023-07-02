@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: clouddw:latest
+    env_file:
+      - .env
+    container_name: clouddw
+    tty: true
+    stdin_open: true

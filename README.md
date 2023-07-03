@@ -9,7 +9,6 @@
 ## Pre requisites
     - Docker
 
-
 ## Repository Structure
 
 ## Project Objective
@@ -21,6 +20,14 @@
 #### Fact Table
 
 ## Usage instructions
+    - Clone this repository to your local machine;
+    - Install Docker on your machine;
+    - Create a .env file using .env.example to help;
+    - Execute `docker compose build`;
+    - `docker compose up`;
+    - Open you container bash or use `docker compose exec app bash`;
+    - In the container bash type `aws configure`;
+    - Set your AWS credentials, you can use the .env variables with **$**.
 
 ## About the project
 

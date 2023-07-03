@@ -8,6 +8,9 @@
 
 ## Pre requisites
     - Docker
+    - In the Docker Ubuntu Container:
+        - Terraform;
+        - AWS CLI.
 
 ## Repository Structure
 

@@ -86,7 +86,7 @@ resource "aws_redshift_cluster" "redshift_cluster" {
   database_name      = "dsadb"
   master_username    = "adminuser"
   master_password    = "dsaSecurePassw0rd!"
-  node_type          = "dc2.large"
+  node_type          = "dc2.micro"
   number_of_nodes    = 1
 
   vpc_security_group_ids    = [aws_security_group.redshift_sg.id]

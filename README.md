@@ -14,6 +14,8 @@
 
 ## Repository Structure
 
+    - `terraform_test` - Scripts to first apply IoC;
+
 ## Project Objective
 
 ## DataWarehouse modelling

@@ -4,6 +4,8 @@
 
 ## Architeture Explanaition
 
+The data to load in DW are in a AWS S3 bucket, in a folder with the name `data`;
+
 ## Objective
 
 ## Pre requisites

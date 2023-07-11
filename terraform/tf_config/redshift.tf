@@ -35,13 +35,10 @@ resource "aws_route_table" "redshift_route_table" {
   }
 }
 
-# Associa a Tabela de Roteamento à Subnet
 resource "aws_route_table_association" "redshift_route_table_association" {
   subnet_id      = aws_subnet.redshift_subnet.id
   route_table_id = aws_route_table.redshift_route_table.id
 }
-
-# Configura Um Grupo de Segurança de Acesso ao Data Warehouse com Redshift
 resource "aws_security_group" "redshift_sg" {
   name        = "redshift_sg"
   description = "Allow Redshift traffic"
@@ -59,7 +56,6 @@ resource "aws_security_group" "redshift_sg" {
   }
 }
 
-# Configura Um Grupo de Subnets Redshift
 resource "aws_redshift_subnet_group" "redshift_subnet_group" {
   name       = "redshift-subnet-group"
   subnet_ids = [aws_subnet.redshift_subnet.id]
@@ -69,7 +65,6 @@ resource "aws_redshift_subnet_group" "redshift_subnet_group" {
   }
 }
 
-# Configura Um Cluster Redshift 
 resource "aws_redshift_cluster" "redshift_cluster" {
   cluster_identifier = "redshift-cluster"
   database_name      = "dsadb"

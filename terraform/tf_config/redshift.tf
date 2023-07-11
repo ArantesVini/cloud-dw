@@ -1,4 +1,3 @@
-# Configura a Redshift VPC
 resource "aws_vpc" "redshift_vpc" {
   cidr_block = "10.0.0.0/16"
 
@@ -6,8 +5,6 @@ resource "aws_vpc" "redshift_vpc" {
     Name = "Redshift VPC"
   }
 }
-
-# Configura a Redshift Subnet
 resource "aws_subnet" "redshift_subnet" {
   cidr_block = "10.0.1.0/24"
   vpc_id     = aws_vpc.redshift_vpc.id
@@ -17,7 +14,6 @@ resource "aws_subnet" "redshift_subnet" {
   }
 }
 
-# Configura um Gateway da Internet e Anexa a VPC
 resource "aws_internet_gateway" "redshift_igw" {
   vpc_id = aws_vpc.redshift_vpc.id
 
@@ -26,7 +22,6 @@ resource "aws_internet_gateway" "redshift_igw" {
   }
 }
 
-# Configura Uma Tabela de Roteamento
 resource "aws_route_table" "redshift_route_table" {
   vpc_id = aws_vpc.redshift_vpc.id
 
@@ -83,7 +78,7 @@ resource "aws_redshift_cluster" "redshift_cluster" {
   node_type          = "dc2.large"
   number_of_nodes    = 1
 
-  vpc_security_group_ids = [aws_security_group.redshift_sg.id]
+  vpc_security_group_ids    = [aws_security_group.redshift_sg.id]
   cluster_subnet_group_name = aws_redshift_subnet_group.redshift_subnet_group.name
 
   skip_final_snapshot = true

@@ -3,4 +3,7 @@
 /node_modules/
 package-lock.json
 package.json
-/terraform/s3/.terraform/
+docker-compose.yml
+Dockerfile
+**/.terraform/
+**/.terraform*

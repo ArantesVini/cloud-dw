@@ -1,9 +1,9 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-2"
 }
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "dsa-cloud-dw-20230710"
+  bucket = "dsa-cloud-dw-20230713"
 
   acl = "private"
   tags = {

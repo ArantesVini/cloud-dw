@@ -9,14 +9,17 @@ The data to load in DW are in a AWS S3 bucket, in a folder with the name `data`;
 ## Objective
 
 ## Pre requisites
-    - Docker
-    - In the Docker Ubuntu Container:
-        - Terraform;
-        - AWS CLI.
+- Terraform;
+- PSQL;
+- AWS Account;
+- AWS CLI.
 
 ## Repository Structure
 
-    - `terraform_test` - Scripts to first apply IoC;
+- `terraform` - Scripts to apply IoC in AWS;
+    - `s3` - Creation of S3 bucket and load the data;
+    - `tf_config` - IoC of Redshift and IAM roles.
+- `sql` - SQL scripts to DW initial load, taking data from the S3 bucket and load in the redshift cluster.
 
 ## Project Objective
 
@@ -27,14 +30,6 @@ The data to load in DW are in a AWS S3 bucket, in a folder with the name `data`;
 #### Fact Table
 
 ## Usage instructions
-    - Clone this repository to your local machine;
-    - Install Docker on your machine;
-    - Create a .env file using .env.example to help;
-    - Execute `docker compose build`;
-    - `docker compose up`;
-    - Open you container bash or use `docker compose exec app bash`;
-    - In the container bash type `aws configure`;
-    - Set your AWS credentials, you can use the .env variables with **$**.
 
 ## About the project
 

@@ -54,20 +54,20 @@ CREATE TABLE IF NOT EXISTS dsaschema.fact_sales (
 
 COPY dsaschema.d_customer
 FROM
-    's3://dsa-cloud-dw-20230713/data/d_customer.csv' IAM_ROLE 'arn:aws:iam::890582101704:role/RedshiftS3AccessRole' CSV;
+    's3://dsa-cloud-dw-20230713/data/d_customer.csv' IAM_ROLE 'arn:aws:iam::124282008832:role/RedshiftS3AccessRole' CSV;
 
 COPY dsaschema.d_locale
 FROM
-    's3://dsa-cloud-dw-20230713/data/d_locale.csv' IAM_ROLE 'arn:aws:iam::890582101704:role/RedshiftS3AccessRole' CSV;
+    's3://dsa-cloud-dw-20230713/data/d_locale.csv' IAM_ROLE 'arn:aws:iam::124282008832:role/RedshiftS3AccessRole' CSV;
 
 COPY dsaschema.d_product
 FROM
-    's3://dsa-cloud-dw-20230713/data/d_product.csv' IAM_ROLE 'arn:aws:iam::890582101704:role/RedshiftS3AccessRole' CSV;
+    's3://dsa-cloud-dw-20230713/data/d_product.csv' IAM_ROLE 'arn:aws:iam::124282008832:role/RedshiftS3AccessRole' CSV;
 
 COPY dsaschema.d_time
 FROM
-    's3://dsa-cloud-dw-20230713/data/d_time.csv' IAM_ROLE 'arn:aws:iam::890582101704:role/RedshiftS3AccessRole' CSV;
+    's3://dsa-cloud-dw-20230713/data/d_time.csv' IAM_ROLE 'arn:aws:iam::124282008832:role/RedshiftS3AccessRole' CSV;
 
 COPY dsaschema.fact_sales
 FROM
-    's3://dsa-cloud-dw-20230713/data/fact_sales.csv' IAM_ROLE 'arn:aws:iam::890582101704:role/RedshiftS3AccessRole' CSV;
+    's3://dsa-cloud-dw-20230713/data/fact_sales.csv' IAM_ROLE 'arn:aws:iam::124282008832:role/RedshiftS3AccessRole' CSV;

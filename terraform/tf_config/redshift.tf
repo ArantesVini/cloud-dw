@@ -69,12 +69,14 @@ resource "aws_redshift_cluster" "redshift_cluster" {
   cluster_identifier = "redshift-cluster"
   database_name      = "dsadb"
   master_username    = "adminuser"
-  master_password    = "very_unsafe_password!!"
+  master_password    = "!!dsaS9curePassw2rd!!715020"
   node_type          = "dc2.large"
   number_of_nodes    = 1
 
   vpc_security_group_ids    = [aws_security_group.redshift_sg.id]
   cluster_subnet_group_name = aws_redshift_subnet_group.redshift_subnet_group.name
+
+  iam_roles = [aws_iam_role.redshift_role.arn]
 
   skip_final_snapshot = true
 }

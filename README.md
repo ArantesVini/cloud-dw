@@ -2,11 +2,15 @@
 
 ## Project Overview
 
+The TechFab Data Warehouse project aims to build a cloud data warehouse using Terraform, AWS S3 and AWS Redshift for TechFab S.A., a fictional industrial company. The data warehouse will enable data-driven decision-making across various sectors such as production, sales, suppliers, finance, maintenance, and quality. By leveraging the power of a data warehouse, TechFab S.A. aims to enhance operational efficiency, identify growth opportunities, and drive the company's success.
+
 ## Architeture Explanaition
 
 The data to load in DW are in a AWS S3 bucket, in a folder with the name `data`;
 
 ## Objective
+
+Apply basically the same Data Warehouse in my on-premises project, techfab-dw, but in the AWS Cloud, using Terraform as IaC.
 
 ## Pre requisites
 - Terraform;
@@ -27,7 +31,14 @@ The data to load in DW are in a AWS S3 bucket, in a folder with the name `data`;
 
 #### Dimensions Tables
 
+- D_TIME;
+- D_PRODUCT;
+- D_LOCALE;
+- D_CUSTOMER.
+
 #### Fact Table
+
+- F_SALES;
 
 ## Usage instructions
 

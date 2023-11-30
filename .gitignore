@@ -7,3 +7,5 @@ docker-compose.yml
 Dockerfile
 **/.terraform/
 **/.terraform*
+*.sql linguist-detectable=true
+*.sql linguist-language=SQL
